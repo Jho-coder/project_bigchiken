@@ -1,8 +1,80 @@
-/*body{
-broasterjerez.es
-display: flex;
-background-color: rgb(243, 117, 13);
-}*/
+
+/* Slideshow container */
+.container {
+    max-width: 10000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Make the images invisible by default */
+  .Containers {
+    display:none;
+  }
+  
+  /* forward & Back buttons */
+  .Back, .forward {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+  }
+  
+  /* Place the "forward button" to the right */
+  .forward {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  /*when the user hovers,add a black background with some little opacity */
+  .Back:hover, .forward:hover {
+    background-color: rgba(227, 138, 5, 0.8);
+  }
+
+  /* The circles or bullets and indicators */
+  .dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: rgb(225, 125, 18);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+  
+  .enable, .dots:hover {
+    background-color: #717161;
+  }
+  
+   Faint animation 
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+  
+  @keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+
+  section {
+    background-color: rgb(184, 184, 184);
+  }
 
 section nav{
     display: flex;
@@ -26,10 +98,22 @@ nav .menu ul li{
 nav .menu ul li a{
     text-decoration: none;
     font-size: 20px;
-    color: rgb(252, 252, 252);
+    font-family:sans-serif;
+    color: rgba(63, 63, 63, 0.868);
     padding: 20px;
 }
 
 nav .menu ul li a:hover{
     color: rgb(223, 104, 25);
+}
+
+.header {
+  background-color: none,
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(184, 184, 184);
 }
